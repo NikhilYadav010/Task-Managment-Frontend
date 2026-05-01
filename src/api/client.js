@@ -1,4 +1,5 @@
-const BASE_URL = import.meta.env.VITE_API_URL || '/api';
+const PROD_API_URL = 'https://ethara-backend-q4k6.onrender.com/api';
+const BASE_URL = import.meta.env.PROD ? PROD_API_URL : '/api';
 
 class ApiError extends Error {
   constructor(message, status, data) {
